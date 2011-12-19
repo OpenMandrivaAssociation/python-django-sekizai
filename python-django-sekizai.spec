@@ -15,6 +15,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python-django-classy-tags >= 0.3.1
 BuildRequires:	python-django-classy-tags >= 0.3.1
+BuildRequires:	python-setuptools
 BuildRequires:	python-sphinx
 
 %description
