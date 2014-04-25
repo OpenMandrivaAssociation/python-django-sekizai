@@ -1,10 +1,11 @@
 %define	module	django-sekizai
 
 Summary:	Media framework for Django
+
 Name:		python-%{module}
-Version:	0.4.2
-Release:	2
-Source0:	%{module}-%{version}.tar.gz
+Version:	0.7
+Release:	1
+Source0:	https://pypi.python.org/packages/source/d/django-sekizai/django-sekizai-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/ojii/django-sekizai/
@@ -31,8 +32,4 @@ popd
 %doc LICENSE README.rst docs/_build/html
 
 
-%changelog
-* Mon Dec 19 2011 Lev Givon <lev@mandriva.org> 0.4.2-1
-+ Revision: 743818
-- imported package python-django-sekizai
 

@@ -1,2 +1,4 @@
+removed_sources:
+  django-sekizai-0.4.2.tar.gz: 9560f02d5f053d76da9a5eebf798edad5d783b69
 sources:
-  "django-sekizai-0.4.2.tar.gz": 9560f02d5f053d76da9a5eebf798edad5d783b69
+  django-sekizai-0.7.tar.gz: cb660cc542c4b3af4a6398e61702253dd05cdad4
