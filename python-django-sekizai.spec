@@ -4,7 +4,7 @@ Summary:	Media framework for Django
 
 Name:		python-%{module}
 Version:	0.7
-Release:	1
+Release:	2
 Source0:	https://pypi.python.org/packages/source/d/django-sekizai/django-sekizai-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
