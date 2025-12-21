@@ -11,6 +11,7 @@ Group:		Development/Python
 Url:		https://github.com/ojii/django-sekizai/
 BuildArch:	noarch
 Requires:	python-django-classy-tags >= 0.3.1
+BuildRequires:	make
 BuildRequires:	python-django-classy-tags >= 0.3.1
 BuildRequires:	python-setuptools
 BuildRequires:	python-sphinx
