@@ -1,36 +1,33 @@
 %define	module	django-sekizai
+%define	oname	django_sekizai
 
-Summary:	Media framework for Django
-
-Name:		python-%{module}
-Version:	0.7
-Release:	2
-Source0:	https://pypi.python.org/packages/source/d/django-sekizai/django-sekizai-%{version}.tar.gz
+Name:		python-django-sekizai
+Summary:	Django Template Blocks with extra functionality
+Version:	4.1.0
+Release:	1
 License:	BSD
 Group:		Development/Python
-Url:		https://github.com/ojii/django-sekizai/
+URL:		https://github.com/ojii/django-sekizai/
+Source0:	https://pypi.python.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+BuildSystem:	python
 BuildArch:	noarch
-Requires:	python-django-classy-tags >= 0.3.1
-BuildRequires:	make
-BuildRequires:	python-django-classy-tags >= 0.3.1
-BuildRequires:	python-setuptools
-BuildRequires:	python-sphinx
+BuildRequires:	python%{pyver}dist(django) >= 3.2
+BuildRequires:	python%{pyver}dist(django-classy-tags) >= 3
+BuildRequires:	python%{pyver}dist(pre-commit)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Sekizai is media (css/js) framework for Django and Django CMS.
 
 %prep
-%setup -q -n %{module}-%{version}
+%autosetup -n %{module}-%{version} -p1
+# Remove bundled egg-info
+rm -rf %{oname}.egg-info
 
-%install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-sed -i 's/.*egg-info$//' FILE_LIST
-pushd docs
-make html
-popd
-
-%files -f FILE_LIST
-%doc LICENSE README.rst docs/_build/html
-
-
-
+%files
+%doc README.rst
+%license LICENSE
+%{python_sitelib}/sekizai
+%{python_sitelib}/%{oname}-%{version}*.*-info
