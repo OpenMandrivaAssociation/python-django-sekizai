@@ -4,7 +4,7 @@
 Name:		python-django-sekizai
 Summary:	Django Template Blocks with extra functionality
 Version:	4.1.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Python
 URL:		https://github.com/ojii/django-sekizai/
